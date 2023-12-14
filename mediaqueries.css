@@ -1,7 +1,78 @@
-@media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
+.projects-containers{
+  width: fit-content;
+  width: auto;
+}
+
+.projects-details-container{
+  width: auto;
+  width: fit-content;
+}
+#about-text {
+
+  /* width: ; */
+}
+
+.make-me-fit {
+  display: flex;
+}
+
+#about {
+  .section-container {
+    margin-top: auto;
+  }
+}
+#projects {
+  /* overflow: none; */
+  
+  .projects-details-container {
+    height: auto;
+    margin-right: auto;
+  }
+  .projects-containers {
+    height: auto;
+  }
+}
+
+
+@media screen and (min-width: 1281px) {
+  #projects {
+    .projects-containers {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+    }
+  } 
+}
+@media screen and (max-width: 1280px) {
+  #projects {
+    .projects-containers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+  } 
+}
+@media screen and (max-width: 768px) {
+  #projects {
+    .projects-containers {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+  } 
+}
+
+
+@media screen and (max-width: 2000px) {
+  #experience {
+    margin-bottom: auto;
+  }
+  #projects {
+    padding-top: 100px;
+    margin-top: 100px;
+    height: 100vh;
     margin-bottom: 6rem;
+    margin-top: auto;
   }
   .about-containers {
     flex-wrap: wrap;
@@ -9,7 +80,31 @@
   #contact,
   #projects {
     height: fit-content;
+    height: auto; /* Fallback for browsers that do not support fit-content */
   }
+  
+}
+
+@media screen and (max-width: 1400px) {
+  #about {
+    padding-top: -10%;
+    margin-top: auto;
+  }
+  #profile {
+    height: 83vh;
+    margin-bottom: 1rem;
+  }
+  .about-containers {
+    flex-wrap: wrap;
+  }
+  #contact,
+  #projects {
+    height: fit-content;
+    height: auto; /* Fallback for browsers that do not support fit-content */
+    width: fit-content;
+    width: auto;
+  }
+  
 }
 
 @media screen and (max-width: 1200px) {
@@ -33,6 +128,8 @@
   section,
   .section-container {
     height: fit-content;
+    height: auto; /* Fallback for browsers that do not support fit-content */
+
   }
   section {
     margin: 0 5%;
@@ -48,6 +145,7 @@
 }
 
 @media screen and (max-width: 600px) {
+  
   #contact,
   footer {
     height: 40vh;
@@ -56,11 +154,19 @@
     height: 83vh;
     margin-bottom: 0;
   }
+  #projects {
+    padding-top: 10%;
+    margin-top: auto;
+    height: 100vh;
+    margin-bottom: 6rem;
+  }
   article {
     font-size: 1rem;
   }
   footer nav {
     height: fit-content;
+    height: auto; /* Fallback for browsers that do not support fit-content */
+
     margin-bottom: 2rem;
   }
   .about-containers,
@@ -100,4 +206,6 @@
   .text-container {
     text-align: justify;
   }
+
+  
 }
