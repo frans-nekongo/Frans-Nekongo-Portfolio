@@ -6,14 +6,18 @@ const firebaseConfig = {
   storageBucket: "YOUR_STORAGE_BUCKET",
   messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
   appId: "YOUR_APP_ID",
-  measurementId: "YOUR_MEASUREMENT_ID"
+  measurementId: "YOUR_MEASUREMENT_ID",
+  databaseURL: "https://nekongo-resume-default-rtdb.europe-west1.firebasedatabase.app/"
 };
 
 // Initialize Firebase
 import { initializeApp } from "firebase/app";
 import { getAnalytics, isSupported } from "firebase/analytics";
+import { getDatabase } from "firebase/database";
+
 
 const app = initializeApp(firebaseConfig);
+const database = getDatabase(app);
 
 // Check if Firebase Analytics is supported before initializing
 if (typeof window !== "undefined" && isSupported()) {
@@ -40,3 +44,4 @@ if (typeof window !== "undefined") {
 }
 
 // The rest of your script...
+
