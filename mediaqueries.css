@@ -1,12 +1,13 @@
 .projects-containers{
-  width: fit-content;
-  width: auto;
+ width: fit-content;
+ width: -moz-fit-content;
 }
 
 .projects-details-container{
-  width: auto;
-  width: fit-content;
+ width: -moz-fit-content;
+ width: fit-content;
 }
+
 #about-text {
 
   /* width: ; */
@@ -49,8 +50,13 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 10px;
+      
     }
   } 
+  #experience,
+  .experience-details-container {
+    margin-bottom: rem;
+  }
 }
 @media screen and (max-width: 768px) {
   #projects {
@@ -58,6 +64,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 10px;
+      
     }
   } 
 }
@@ -101,6 +108,7 @@
   #projects {
     height: fit-content;
     height: auto; /* Fallback for browsers that do not support fit-content */
+    width: -moz-fit-content;
     width: fit-content;
     width: auto;
   }
@@ -117,6 +125,7 @@
   #experience,
   .experience-details-container {
     margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   #profile,
   .section-container {

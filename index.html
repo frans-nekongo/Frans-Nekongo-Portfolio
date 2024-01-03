@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -43,10 +50,11 @@
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Frans Nekongo</h1>
-        <p class="section__text__p2">Fullstack Dev(mobile/desktop)</p>
+        <p class="section__text__p2">CS Student - Full-Stack Mobile & Desktop Development</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
+            id="download-cv-btn"
             onclick="location.href='https://github.com/frans-nekongo/Frans-Nekongo-Portfolio/blob/852b4be35aa5675d66f5dcf4ae773ad1f682b21c/Assets/Documents/Frans%20Nekongo%20Resume.pdf'"
           >
             Download CV
@@ -504,6 +512,6 @@
       </nav>
       <p>Copyright &#169; 2023 Frans Nekongo. All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
+    <script type="module" src="script.mjs"></script>
   </body>
 </html>

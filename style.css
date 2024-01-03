@@ -100,6 +100,7 @@ a:hover {
   right: 0;
   background-color: white;
   width: fit-content;
+  width: -moz-fit-content;
   max-height: 0;
   overflow: hidden;
   transition: all 0.3ms ease-in-out;
@@ -142,18 +143,17 @@ a:hover {
 .hamburger-icon span:first-child {
   opacity: 1;
 }
-
-.hamburger-icon span:first-child {
-  transform: none;
+#experience {
+  height: auto;
+  /* rest of the styles */
 }
-
-/* SECTIONS */
 
 section {
   padding-top: 4vh;
   height: 96vh;
   margin: 0 10rem;
   box-sizing: border-box;
+  min-height: -moz-fit-content;
   min-height: fit-content;
 }
 
