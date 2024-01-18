@@ -305,6 +305,12 @@ section {
   border-color: rgb(163, 163, 163);
   text-align: center;
 }
+.text-container {
+  padding: 1.5rem;
+  flex: 1;
+  background: white;
+  text-align:center;
+}
 
 .section-container {
   gap: 4rem;
@@ -433,3 +439,5 @@ footer {
 footer p {
   text-align: center;
 }
+
+/*  */
