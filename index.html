@@ -1,24 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<!--Firebase App (the core Firebase SDK) is always required and must be listed first-->
+<!-- <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script> -->
 
-  <!-- Add Firebase products that you want to use -->
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Frans-Nekongo-Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
-  </head>
-  <body>
-    <nav id="desktop-nav">
-      <div class="logo">Frans Nekongo</div>
-      <div>
+<!-- Add Firebase products that you want to use -->
+<!--<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script> -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frans-Nekongo-Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Frans Nekongo</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Frans Nekongo</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./Assets/Icons/frans nekongo profile 2.png" alt="fran's profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Frans Nekongo</h1>
+      <p class="section__text__p2">CS Student - Full-Stack Mobile & Desktop Development</p>
+      <div class="btn-container">
+
+        <button class="btn btn-color-2" id="download-cv-btn" onclick="downloadFile()">
+          Download CV
+        </button>
+
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./Assets/Icons/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/frans-nekongo-760369173'" />
+        <img src="./Assets/Icons/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/frans-nekongo'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./Assets/Icons/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>2+ years <br />Front-end <br />Back-end <br />Design</p>
+          </div>
+          <div class="details-container">
+            <img src="./Assets/Icons/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>B.Sc. Computer Science - Software Development (2021-2024)<br />NSSC(Grade12) </p>
+            <br />
+            <h3>Certifications</h3>
+            <p>UIPath RPA Developer
+              <br>OpenBots RPA Developer
+              <br>OpenBots Business Analyst
+            </p>
+          </div>
+        </div>
+        <div class="text-container">
+          <div class="make-me-fit">
+            <p id="about-text">
+              <h1 style="text-align: center;font-size: large; font-family: ”Allegro,ui-serif;">
+                  3rd year Software Development student at the Namibian University Of Science And Technology(NUST).
+                  Exploring the field of "WHY" & "HOW",
+                  i am on a learning journey to take 5 sectors of my career to the next level,im keen on further
+                  exploring,Mobile Dev,
+                  Passion,Creativity and inovation Projects,Machine Learning,Data Analytics and some AI(i dabble
+                  &#128511;),some of the projects below are my way of exploring them.
+                  <br />
+                  <br />
+                  im 21 years old and have a long way to go
+                  <br />
+                  This is a recent journey and i will be very slow in updating most of these but i will achieve my goal.
+
+                  me : 0, HTML :6
+              </h1>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./Assets/Icons/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./Assets/Icons/java.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Java</h3>
+                <p>Upper-Intermediate </p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/Icons/Kotlin_Icon.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>kotlin</h3>
+                <p>Upper-Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/Icons/jetpack compose.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Jetpack Compose</h3>
+                <p>upper-Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/Icons/RPA.jpg" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Robotic Process automation</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/Icons/Ballerina-icon.jpg" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Ballerina(RestAPI)</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/Icons/Ballerina-icon.jpg" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Ballerina(GRPC)</h3>
+                <p>Beginner</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/Icons/flutter-icon.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Flutter</h3>
+                <p>Beginner</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/Icons/Python_logo.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Python(ML & Jupyter Notebook)</h3>
+                <p>Beginner</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/Icons/microsoft-excel.svg" alt="Experience icon" class="icon" />
+              <div>
+                <h3>visual basic(Excel)</h3>
+                <p>Beginner</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/Icons/Studio-Icon.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Open Bots</h3>
+                <p>Upper-Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/Icons/ui-path-logo.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>UI Path</h3>
+                <p>Beginner</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Side Quests</h2>
+          <div class="article-container">
+            <article>
+              <img src="./Assets/Icons/addobe after effects.png" alt="Experience icon" class="icon" />
+              <img src="./Assets/Icons/addobe photoshop.png" alt="Experience icon" class="icon" /><img
+                src="./Assets/Icons/addobe premiere pro.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Adobe </h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/Icons/GitHub-logo.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Github</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets/Icons/fl-studio icon.jpg" alt="Experience icon" class="icon" />
+              <div>
+                <h3>FL Studio</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./Assets//Icons/git icon.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Git</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./Assets/Icons/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Projects Im Working On</p>
+    <h1 class="title">Projects</h1>
+
+    <div class="projects-details-container">
+      <div class="projects-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./Assets/Icons/pattern logo.png" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Pattern</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/frans-nekongo/Pattern.git'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href=''" disabled>
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./Assets/Icons/AR.png" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">MessageAR</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/frans-nekongo/MessageAR.git'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href=''" disabled>
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./Assets/Icons//fuel-it.png" alt="Project 1" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Fuel-it</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/frans-nekongo/Fuel-it.git'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href=''" disabled>
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./Assets/Icons/nust icon.png" alt="Project 2" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Nust-Campus Map</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/frans-nekongo/Nust-Campus-Map.git'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href=''" disabled>
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./Assets/Icons/v-automate.jpg" alt="Project 3" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">V-Automate</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/frans-nekongo/V-Automate.git'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href=''" disabled>
+              Live Demo
+            </button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+    <img src="./Assets/Icons/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./Assets/Icons/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p>fransnekongoo@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./Assets/Icons/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/frans-nekongo-760369173">LinkedIn</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
@@ -27,497 +357,16 @@
         </ul>
       </div>
     </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Frans Nekongo</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-      </div>
-    </nav>
-    <section id="profile">
-      <div class="section__pic-container">
-        <img src="./Assets/Icons/frans nekongo profile 2.png" alt="fran's profile picture" />
-      </div>
-      <div class="section__text">
-        <p class="section__text__p1">Hello, I'm</p>
-        <h1 class="title">Frans Nekongo</h1>
-        <p class="section__text__p2">CS Student - Full-Stack Mobile & Desktop Development</p>
-        <div class="btn-container">
-          <button
-            class="btn btn-color-2"
-            id="download-cv-btn"
-            onclick="location.href='https://github.com/frans-nekongo/Frans-Nekongo-Portfolio/blob/852b4be35aa5675d66f5dcf4ae773ad1f682b21c/Assets/Documents/Frans%20Nekongo%20Resume.pdf'"
-          >
-            Download CV
-          </button>
+    <p>Copyright &#169; 2024 Frans Nekongo. All Rights Reserved.</p>
 
-          <button class="btn btn-color-1" onclick="location.href='./#contact'">
-            Contact Info
-          </button>
-        </div>
-        <div id="socials-container">
-          <img
-            src="./Assets/Icons/linkedin.png"
-            alt="My LinkedIn profile"
-            class="icon"
-            onclick="location.href='https://www.linkedin.com/in/frans-nekongo-760369173'"
-          />
-          <img
-            src="./Assets/Icons/github.png"
-            alt="My Github profile"
-            class="icon"
-            onclick="location.href='https://github.com/frans-nekongo'"
-          />
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <p class="section__text__p1">Get To Know More</p>
-      <h1 class="title">About Me</h1>
-      <div class="section-container">
-        <div class="about-details-container">
-          <div class="about-containers">
-            <div class="details-container">
-              <img
-                src="./Assets/Icons/experience.png"
-                alt="Experience icon"
-                class="icon"
-              />
-              <h3>Experience</h3>
-              <p>2+ years <br />Front-end <br />Back-end <br />Design</p>
-            </div>
-            <div class="details-container">
-              <img
-                src="./Assets/Icons/education.png"
-                alt="Education icon"
-                class="icon"
-              />
-              <h3>Education</h3>
-              <p>B.Sc. Computer Science - Software Development (2021-2024)<br />NSSC(Grade12) </p>
-              <br />
-              <h3>Certifications</h3>
-              <p>UIPath RPA Developer
-                <br>OpenBots RPA Developer
-                <br>OpenBots Business Analyst
-              </p>
-            </div>
-          </div>
-          <div class="text-container">
-            <div class="make-me-fit">
-              <p id="about-text">
-                <center>
-                  <font size="5" face=”Allegro BT” >
-                    
-                    3rd year Software Development student with  a natural inclination for problem-solving and enjoy
-                    finding innovative solutions.I think the most important question to ask is "WHY",
-                    i am on a learning journey to take 5 sectors of my career to the next level,im keen on further exploring,Mobile Dev,
-                    Passion,Creativity and inovation Projects,Machine Learning,Data Analytics and some AI(i dabble &#128511;),some of the projects below are my way of exploring them.
-                    <br/>
-                    <br/>
-                    im 21 years old and have a long way to go 
-                    <br/>
-                    This is a recent journey and i will be very slow in updating most of these but i will achieve my goal.
-
-                    me : 0, HTML :6
-                  </font>
-                </center>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./Assets/Icons/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#experience'"
-      />
-    </section>
-    <section id="experience">
-      <p class="section__text__p1">Explore My</p>
-      <h1 class="title">Experience</h1>
-      <div class="experience-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <h2 class="experience-sub-title">Development</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./Assets/Icons/java.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Java</h3>
-                  <p>Upper-Intermediate	</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./Assets/Icons/Kotlin_Icon.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>kotlin</h3>
-                  <p>Upper-Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./Assets/Icons/jetpack compose.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Jetpack Compose</h3>
-                  <p>upper-Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./Assets/Icons/RPA.jpg"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Robotic Process automation</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./Assets/Icons/Ballerina-icon.jpg"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Ballerina(RestAPI)</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./Assets/Icons/Ballerina-icon.jpg"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Ballerina(GRPC)</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./Assets/Icons/flutter-icon.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Flutter</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./Assets/Icons/Python_logo.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Python(ML & Jupyter Notebook)</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./Assets/Icons/microsoft-excel.svg"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>visual basic(Excel)</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./Assets/Icons/Studio-Icon.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Open Bots</h3>
-                  <p>Upper-Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./Assets/Icons/ui-path-logo.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>UI Path</h3>
-                  <p>Beginner</p>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="details-container">
-            <h2 class="experience-sub-title">Side Quests</h2>
-            <div class="article-container">
-              <article>
-                <img
-                  src="./Assets/Icons/addobe after effects.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <img
-                  src="./Assets/Icons/addobe photoshop.png"
-                  alt="Experience icon"
-                  class="icon"
-                /><img
-                src="./Assets/Icons/addobe premiere pro.png"
-                alt="Experience icon"
-                class="icon"
-              />
-                <div>
-                  <h3>Adobe </h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./Assets/Icons/GitHub-logo.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Github</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./Assets/Icons/fl-studio icon.jpg"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>FL Studio</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-              <article>
-                <img
-                  src="./Assets//Icons/git icon.png"
-                  alt="Experience icon"
-                  class="icon"
-                />
-                <div>
-                  <h3>Git</h3>
-                  <p>Intermediate</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img
-        src="./Assets/Icons/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#projects'"
-      />
-    </section>
-    <section id="projects">
-      <p class="section__text__p1">Projects Im Working On</p>
-      <h1 class="title">Projects</h1>
-      
-      <div class="projects-details-container">
-        <div class="projects-containers">
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./Assets/Icons/pattern logo.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Pattern</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/frans-nekongo/Pattern.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
-                disabled
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./Assets/Icons/AR.png"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">MessageAR</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/frans-nekongo/MessageAR.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
-                disabled
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./Assets/Icons//fuel-it.png"
-                alt="Project 1"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Fuel-it</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/frans-nekongo/Fuel-it.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
-                disabled
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./Assets/Icons/nust icon.png"
-                alt="Project 2"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">Nust-Campus Map</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/frans-nekongo/Nust-Campus-Map.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
-                disabled
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          <div class="details-container color-container">
-            <div class="article-container">
-              <img
-                src="./Assets/Icons/v-automate.jpg"
-                alt="Project 3"
-                class="project-img"
-              />
-            </div>
-            <h2 class="experience-sub-title project-title">V-Automate</h2>
-            <div class="btn-container">
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/frans-nekongo/V-Automate.git'"
-              >
-                Github
-              </button>
-              <button
-                class="btn btn-color-2 project-btn"
-                onclick="location.href=''"
-                disabled
-              >
-                Live Demo
-              </button>
-            </div>
-          </div>
-          
-          
-        </div>
-      </div>
-      <img
-        src="./Assets/Icons/arrow.png"
-        alt="Arrow icon"
-        class="icon arrow"
-        onclick="location.href='./#contact'"
-      />
-    </section>
-    <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
-      <div class="contact-info-upper-container">
-        <div class="contact-info-container">
-          <img
-            src="./Assets/Icons/email.png"
-            alt="Email icon"
-            class="icon contact-icon email-icon"
-          />
-          <p>fransnekongoo@gmail.com</a></p>
-        </div>
-        <div class="contact-info-container">
-          <img
-            src="./Assets/Icons/linkedin.png"
-            alt="LinkedIn icon"
-            class="icon contact-icon"
-          />
-          <p><a href="https://www.linkedin.com/in/frans-nekongo-760369173">LinkedIn</a></p>
-        </div>
-      </div>
-    </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2023 Frans Nekongo. All Rights Reserved.</p>
-    </footer>
     <!-- <script type="module" src="script.mjs"></script> -->
     <script type="module" src="test_script.js"></script>
-  </body>
+    <script>
+      function downloadFile() {
+        window.location.href = 'https://drive.google.com/file/d/1_I57VyXBXMgK0x6Ebk9xrpQ3W-fJKfSh/uc?export=download';
+      }
+    </script>
+  </footer>
+</body>
+
 </html>
